@@ -4,7 +4,8 @@ import { View } from 'react-native';
 
 const CardSection = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    // [...] means use containerStyle, unless some prop is passed on
+    <View style={[styles.containerStyle, props.style]}>
       {props.children}
     </View>
   );
